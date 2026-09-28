@@ -1,0 +1,210 @@
+{
+  "timestamp": "2026-09-28T16:25:51.797173+02:00",
+  "model": "Llama-3.2-1B-Computer-Engineering-OpenVINO-FP16",
+  "openvino_version": "2026.4.0-22959-99c81491cc3-releases/2026/4",
+  "openvino_genai_version": "2026.4.0.0-3407-7ea2546852a",
+  "power_profile": "performance",
+  "kernel": "7.0.0-31-generic",
+  "prompt": "Q: Explain how CPU cache memory improves processor performance, including its relationship with RAM, latency, and memory locality.\nA:",
+  "benchmark_method": {
+    "warmups": 2,
+    "iterations": 5,
+    "max_new_tokens": 128,
+    "ignore_eos": true,
+    "do_sample": false
+  },
+  "devices": [
+    {
+      "device": "CPU",
+      "full_device_name": "Intel(R) Core(TM) Ultra 9 275HX",
+      "pipeline_load_ms": 282.65664799982915,
+      "prompt_tokens": 26,
+      "forced_output_tokens": 128,
+      "warmups": 2,
+      "iterations": 5,
+      "ttft_ms": {
+        "mean": 127.7561264038086,
+        "std": 3.989305109052422,
+        "min": 121.47261047363281,
+        "max": 132.0961456298828
+      },
+      "tpot_ms_per_token": {
+        "mean": 37.96075592041016,
+        "std": 0.12278701014292454,
+        "min": 37.811710357666016,
+        "max": 38.11327362060547
+      },
+      "throughput_tokens_per_second": {
+        "mean": 26.34321517944336,
+        "std": 0.08521838702051772,
+        "min": 26.237577438354492,
+        "max": 26.44683265686035
+      },
+      "runs": [
+        {
+          "ttft_ms": 129.183837890625,
+          "tpot_ms_per_token": 37.865264892578125,
+          "throughput_tokens_per_second": 26.409427642822266,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        },
+        {
+          "ttft_ms": 121.47261047363281,
+          "tpot_ms_per_token": 37.97957992553711,
+          "throughput_tokens_per_second": 26.329938888549805,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        },
+        {
+          "ttft_ms": 126.7553482055664,
+          "tpot_ms_per_token": 38.11327362060547,
+          "throughput_tokens_per_second": 26.237577438354492,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        },
+        {
+          "ttft_ms": 132.0961456298828,
+          "tpot_ms_per_token": 38.03395080566406,
+          "throughput_tokens_per_second": 26.292299270629883,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        },
+        {
+          "ttft_ms": 129.27268981933594,
+          "tpot_ms_per_token": 37.811710357666016,
+          "throughput_tokens_per_second": 26.44683265686035,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        }
+      ]
+    },
+    {
+      "device": "NPU",
+      "full_device_name": "Intel(R) AI Boost",
+      "pipeline_load_ms": 6676.375387000007,
+      "prompt_tokens": 26,
+      "forced_output_tokens": 128,
+      "warmups": 2,
+      "iterations": 5,
+      "ttft_ms": {
+        "mean": 981.8973999023438,
+        "std": 1.693922704275066,
+        "min": 980.2024536132812,
+        "max": 984.3480834960938
+      },
+      "tpot_ms_per_token": {
+        "mean": 48.48501892089844,
+        "std": 0.20318369191208827,
+        "min": 48.26885223388672,
+        "max": 48.732025146484375
+      },
+      "throughput_tokens_per_second": {
+        "mean": 20.625217056274415,
+        "std": 0.08645484823709317,
+        "min": 20.5203857421875,
+        "max": 20.717294692993164
+      },
+      "runs": [
+        {
+          "ttft_ms": 982.88134765625,
+          "tpot_ms_per_token": 48.281532287597656,
+          "throughput_tokens_per_second": 20.71185302734375,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        },
+        {
+          "ttft_ms": 980.2024536132812,
+          "tpot_ms_per_token": 48.26885223388672,
+          "throughput_tokens_per_second": 20.717294692993164,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        },
+        {
+          "ttft_ms": 981.2698364257812,
+          "tpot_ms_per_token": 48.54806137084961,
+          "throughput_tokens_per_second": 20.59814453125,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        },
+        {
+          "ttft_ms": 980.7852783203125,
+          "tpot_ms_per_token": 48.59462356567383,
+          "throughput_tokens_per_second": 20.578407287597656,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        },
+        {
+          "ttft_ms": 984.3480834960938,
+          "tpot_ms_per_token": 48.732025146484375,
+          "throughput_tokens_per_second": 20.5203857421875,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        }
+      ]
+    },
+    {
+      "device": "GPU",
+      "full_device_name": "Intel(R) Graphics (iGPU)",
+      "pipeline_load_ms": 2537.2709089997443,
+      "prompt_tokens": 26,
+      "forced_output_tokens": 128,
+      "warmups": 2,
+      "iterations": 5,
+      "ttft_ms": {
+        "mean": 46.95420761108399,
+        "std": 0.5315444424183196,
+        "min": 46.143096923828125,
+        "max": 47.634857177734375
+      },
+      "tpot_ms_per_token": {
+        "mean": 40.932090759277344,
+        "std": 0.01752780377316941,
+        "min": 40.91065979003906,
+        "max": 40.949180603027344
+      },
+      "throughput_tokens_per_second": {
+        "mean": 24.430712509155274,
+        "std": 0.010462789445948948,
+        "min": 24.420513153076172,
+        "max": 24.443506240844727
+      },
+      "runs": [
+        {
+          "ttft_ms": 46.96615982055664,
+          "tpot_ms_per_token": 40.940391540527344,
+          "throughput_tokens_per_second": 24.425756454467773,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        },
+        {
+          "ttft_ms": 47.634857177734375,
+          "tpot_ms_per_token": 40.91595458984375,
+          "throughput_tokens_per_second": 24.440343856811523,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        },
+        {
+          "ttft_ms": 47.04353332519531,
+          "tpot_ms_per_token": 40.91065979003906,
+          "throughput_tokens_per_second": 24.443506240844727,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        },
+        {
+          "ttft_ms": 46.143096923828125,
+          "tpot_ms_per_token": 40.949180603027344,
+          "throughput_tokens_per_second": 24.420513153076172,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        },
+        {
+          "ttft_ms": 46.98339080810547,
+          "tpot_ms_per_token": 40.94426727294922,
+          "throughput_tokens_per_second": 24.423442840576172,
+          "generated_tokens": 128,
+          "input_tokens": 26
+        }
+      ]
+    }
+  ]
+}

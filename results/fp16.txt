@@ -1,0 +1,98 @@
+==============================================================================
+ OPENVINO RELEASE BENCHMARK
+==============================================================================
+Date: 2026-09-28T16:23:39.632829+02:00
+Model: Llama-3.2-1B-Computer-Engineering-OpenVINO-FP16
+OpenVINO: 2026.4.0-22959-99c81491cc3-releases/2026/4
+OpenVINO GenAI: 2026.4.0.0-3407-7ea2546852a
+Available devices: ['CPU', 'GPU', 'NPU']
+Benchmark devices: ['CPU', 'NPU', 'GPU']
+Power profile: performance
+Kernel: 7.0.0-31-generic
+
+NOTE:
+Q:/A: prompt format is used because this model is a completion-style Computer Engineering model.
+ignore_eos=True forces every backend to generate exactly 128 tokens.
+
+==============================================================================
+ DEVICE: CPU
+ NAME:   Intel(R) Core(TM) Ultra 9 275HX
+==============================================================================
+Pipeline load: 282.66 ms
+Prompt tokens: 26
+Forced output tokens: 128
+
+=== WARMUP ===
+Warmup 1/2: complete
+Warmup 2/2: complete
+
+=== MEASURED RUNS ===
+Run 1: TTFT=129.18 ms | TPOT=37.87 ms/token | Throughput=26.41 tok/s
+Run 2: TTFT=121.47 ms | TPOT=37.98 ms/token | Throughput=26.33 tok/s
+Run 3: TTFT=126.76 ms | TPOT=38.11 ms/token | Throughput=26.24 tok/s
+Run 4: TTFT=132.10 ms | TPOT=38.03 ms/token | Throughput=26.29 tok/s
+Run 5: TTFT=129.27 ms | TPOT=37.81 ms/token | Throughput=26.45 tok/s
+
+=== FINAL ===
+TTFT:       127.76 ± 3.99 ms
+TPOT:       37.96 ± 0.12 ms/token
+Throughput: 26.34 ± 0.09 tok/s
+
+==============================================================================
+ DEVICE: NPU
+ NAME:   Intel(R) AI Boost
+==============================================================================
+Pipeline load: 6676.38 ms
+Prompt tokens: 26
+Forced output tokens: 128
+
+=== WARMUP ===
+Warmup 1/2: complete
+Warmup 2/2: complete
+
+=== MEASURED RUNS ===
+Run 1: TTFT=982.88 ms | TPOT=48.28 ms/token | Throughput=20.71 tok/s
+Run 2: TTFT=980.20 ms | TPOT=48.27 ms/token | Throughput=20.72 tok/s
+Run 3: TTFT=981.27 ms | TPOT=48.55 ms/token | Throughput=20.60 tok/s
+Run 4: TTFT=980.79 ms | TPOT=48.59 ms/token | Throughput=20.58 tok/s
+Run 5: TTFT=984.35 ms | TPOT=48.73 ms/token | Throughput=20.52 tok/s
+
+=== FINAL ===
+TTFT:       981.90 ± 1.69 ms
+TPOT:       48.49 ± 0.20 ms/token
+Throughput: 20.63 ± 0.09 tok/s
+
+==============================================================================
+ DEVICE: GPU
+ NAME:   Intel(R) Graphics (iGPU)
+==============================================================================
+Pipeline load: 2537.27 ms
+Prompt tokens: 26
+Forced output tokens: 128
+
+=== WARMUP ===
+Warmup 1/2: complete
+Warmup 2/2: complete
+
+=== MEASURED RUNS ===
+Run 1: TTFT=46.97 ms | TPOT=40.94 ms/token | Throughput=24.43 tok/s
+Run 2: TTFT=47.63 ms | TPOT=40.92 ms/token | Throughput=24.44 tok/s
+Run 3: TTFT=47.04 ms | TPOT=40.91 ms/token | Throughput=24.44 tok/s
+Run 4: TTFT=46.14 ms | TPOT=40.95 ms/token | Throughput=24.42 tok/s
+Run 5: TTFT=46.98 ms | TPOT=40.94 ms/token | Throughput=24.42 tok/s
+
+=== FINAL ===
+TTFT:       46.95 ± 0.53 ms
+TPOT:       40.93 ± 0.02 ms/token
+Throughput: 24.43 ± 0.01 tok/s
+
+==============================================================================
+ FINAL COMPARISON
+==============================================================================
+DEVICE         TTFT ms     TPOT ms/tok      TOKENS/s
+----------------------------------------------------
+CPU             127.76           37.96         26.34
+NPU             981.90           48.49         20.63
+GPU              46.95           40.93         24.43
+
+Saved: results/final-release-benchmark.json

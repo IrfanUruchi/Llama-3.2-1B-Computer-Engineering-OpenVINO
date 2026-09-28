@@ -1,0 +1,23 @@
+# OpenVINO model weights / generated model directories
+*.bin
+*.safetensors
+*.onnx
+
+# Large generated model artifacts
+openvino_model.*
+openvino_tokenizer.*
+openvino_detokenizer.*
+
+# Local model directories
+models/
+model/
+artifacts/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local files
+.DS_Store

@@ -1,0 +1,53 @@
+=== DATE ===
+2026-09-28T16:11:02+02:00
+
+=== OS ===
+NAME="IULinux"
+VERSION="0.1 Development"
+
+=== KERNEL ===
+7.0.0-31-generic
+
+=== POWER PROFILE ===
+performance
+
+=== OPENVINO DEVICES ===
+OpenVINO: 2026.4.0-22959-99c81491cc3-releases/2026/4
+OpenVINO: 2026.4.0-22959-99c81491cc3-releases/2026/4
+Devices: ['CPU', 'GPU', 'NPU']
+
+DEVICE: CPU
+NAME: Intel(R) Core(TM) Ultra 9 275HX
+
+DEVICE: GPU
+NAME: Intel(R) Graphics (iGPU)
+
+DEVICE: NPU
+NAME: Intel(R) AI Boost
+Devices: ['CPU', 'GPU', 'NPU']
+
+DEVICE: CPU
+NAME: Intel(R) Core(TM) Ultra 9 275HX
+
+DEVICE: GPU
+NAME: Intel(R) Graphics (iGPU)
+
+DEVICE: NPU
+NAME: Intel(R) AI Boost
+
+=== OPENCL ===
+Platform #0: Intel(R) OpenCL Graphics
+ `-- Device #0: Intel(R) Graphics
+
+=== NPU STACK ===
+ii  intel-driver-compiler-npu                           1.38.0.20260910-34487311128~ubuntu26.04    amd64        Intel(R) Driver Compiler for NPU hardware
+ii  intel-fw-npu                                        1.38.0.20260910-34487311128~ubuntu26.04    amd64        Intel(R) Firmware package for NPU hardware
+ii  intel-level-zero-npu                                1.38.0.20260910-34487311128~ubuntu26.04    amd64        Intel(R) Level Zero Driver for NPU hardware
+ii  libze1:amd64                                        1.32.0-1~26.04~ppa1                        amd64        oneAPI Level Zero -- share libraries
+
+=== GPU STACK ===
+ii  intel-opencl-icd                                    26.05.37020.3-1                            amd64        Intel graphics compute runtime for OpenCL
+ii  intel-opencl-icd-legacy                             24.35.30872.45-1                           amd64        Intel graphics compute runtime for OpenCL -- legacy platforms
+ii  libigc1:amd64                                       1.0.17791.18+1-3                           amd64        Intel graphics compiler for OpenCL -- core libs
+ii  libigc2:amd64                                       2.28.4-4                                   amd64        Intel graphics compiler for OpenCL -- core libs
+ii  libigdgmm12:amd64                                   22.9.0+ds1-1                               amd64        Intel Graphics Memory Management Library -- shared library
