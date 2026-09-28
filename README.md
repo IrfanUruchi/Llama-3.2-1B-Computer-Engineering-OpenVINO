@@ -304,3 +304,15 @@ More details:
 
 - [Conversion and quantization](docs/conversion.md)
 - [IULinux and Intel backend setup](docs/iulinux.md)
+
+---
+
+## License
+
+The OpenVINO model variants documented in this repository are derivative works of **Llama 3.2** and are subject to the [Llama 3.2 Community License](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/LICENSE) and the [Llama 3.2 Acceptable Use Policy](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/USE_POLICY.md).
+
+**Built with Llama.**
+
+Llama 3.2 is licensed under the Llama 3.2 Community License, Copyright © Meta Platforms, Inc. All Rights Reserved.
+
+The OpenVINO model files themselves are distributed through the linked Hugging Face repositories. This GitHub repository contains benchmark code, conversion documentation, environment information, and benchmark results.
